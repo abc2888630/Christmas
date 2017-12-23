@@ -9,7 +9,7 @@
 		<script src="snowstorm.js"></script>
 
 		<!-- for the Snowstorm homepage, allow the demo to run on iPhone and mobile devices. -->
-		<script>snowStorm.excludeMobile = false;</script>
+		<script>snowStorm.excludeMobile = true;</script>
 
 		<!-- bonus christmas light stuff, not required for snowstorm -->
 		<script src="lights/soundmanager2-nodebug-jsmin.js"></script>
@@ -18,6 +18,7 @@
 
 		<style>
 		body {
+			height: 675px;
 			padding:0; 
 			margin:0;
 			background: #3B3B3B;
@@ -29,15 +30,184 @@
 			margin: 25px auto;
 			border: 1px solid #000;
 		}
-	</style>
+		.christmas-tree {
+			width: 112px;
+			height: 137px;
+			background: url(./images/christmas-tree.png);
+		}
+		.tree1{
+			/*top: 597px;*/
+			bottom: 15%;
+			left: 52%;	
+			position: absolute;
+			-moz-animation-duration: .6s;
+			-webkit-animation-duration: .6s;
+			-ms-animation-duration: .6s;
+			animation-duration: .6s;
+			z-index: 3;
+		}
+		.tree2{
+			/* top: 581px;*/
+			bottom: 20%;
+			left: 49%;
+
+			position: absolute;
+			-moz-animation-duration: .6s;
+			-webkit-animation-duration: .6s;
+			-ms-animation-duration: .6s;
+			animation-duration: .6s;
+			z-index: 3;
+		}
+		.tree3{
+			/*top: 565px;*/
+			bottom: 18%;
+			left: 44%;
+			position: absolute;
+			-moz-animation-duration: .6s;
+			-webkit-animation-duration: .6s;
+			-ms-animation-duration: .6s;
+			animation-duration: .6s;
+			z-index: 13;
+			}.tree4{
+				/*top: 565px;*/
+				bottom: 20%;
+				left: 40%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree5{
+				/*top: 565px;*/
+				bottom: 18%;
+				left: 36%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree6{
+				/*top: 565px;*/
+				bottom: 14%;
+				left: 32%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree7{
+				/*top: 565px;*/
+				bottom: 20%;
+				left: 38%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree8{
+				bottom: 18%;
+				left: 34%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 2;
+			}
+			.tree9{
+				/* top: 581px;*/
+				bottom: 20%;
+				left: 42%;
+
+
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree10{
+				/* top: 581px;*/
+				bottom: 20%;
+				left: 47%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+			.tree11{
+				/* top: 581px;*/
+				bottom: 22%;
+				left: 45%;
+				position: absolute;
+				-moz-animation-duration: .6s;
+				-webkit-animation-duration: .6s;
+				-ms-animation-duration: .6s;
+				animation-duration: .6s;
+				z-index: 3;
+			}
+
+			.snowground{
+				width: 100%;
+				height: 224px;
+				bottom: 0%;
+				background-image: url(./images/snowground.png);
+			/*background-repeat: no-repeat;
+			background-position: bottom;*/
+			position: absolute;
+			/*top: 657px;*/
+			z-index: 2;
+
+		}
+		.snowman{
+			/*top: 600px;*/
+			bottom: 16%;
+			left: 38%;
+			width: 115px;
+			height: 103px;
+			position: absolute;
+			background: url(./images/snowman.png);
+			-moz-animation-duration: .6s;
+			-webkit-animation-duration: .6s;
+			-ms-animation-duration: .6s;
+			animation-duration: .6s;
+			z-index: 4;
+		}
+	}
+</style>
 </head>
 <body>  
 	<audio id="muiscdiv" src="Jingle_Bells.mp3" autoplay="autoplay" preload="preload" loop="loop"></audio>
 	<div id="lights">
 		<!-- lights go here -->
 	</div>
+	<div class="christmas-tree tree1"></div>
+	<div class="christmas-tree tree2"></div>
+	<div class="christmas-tree tree3"></div>
+	<div class="christmas-tree tree4"></div>
+	<div class="christmas-tree tree5"></div>
+	<div class="christmas-tree tree6"></div>
+	<div class="christmas-tree tree7"></div>
+	<div class="christmas-tree tree8"></div>
+	<div class="christmas-tree tree9"></div>
+	<div class="christmas-tree tree10"></div>
+	<div class="christmas-tree tree11"></div>
+	<div class="snowman"></div>
+	<div class="snowground"></div>
 	<img id="demo">
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
 	<script src="jsized.snow.min.js" type="text/javascript" src="re_.js"></script>
 	<script>
 		createSnow('', 600);
@@ -52,12 +222,12 @@
 // 			}, false);
 // 		}
 // 		audioAutoPlay('muiscdiv');//xxx是你audio标签的id
-		try {
-			reinvigorate.track("vq4zg-s08a9v69iv");
-		} catch(err) {}
+try {
+	reinvigorate.track("vq4zg-s08a9v69iv");
+} catch(err) {}
 
-		function autoPlayAudio1() {
-			wx.config({
+function autoPlayAudio1() {
+	wx.config({
 		            // 配置信息, 即使不正确也能使用 wx.ready
 		            debug: false,
 		            appId: '',
@@ -66,12 +236,12 @@
 		            signature: '',
 		            jsApiList: []
 		        });
-			wx.ready(function() {
-				document.getElementById('muiscdiv').play();
-			});
-		}
-		
-		autoPlayAudio1();
+	wx.ready(function() {
+		document.getElementById('muiscdiv').play();
+	});
+}
+
+autoPlayAudio1();
 </script>
 
 </body>
